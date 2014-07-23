@@ -3,6 +3,7 @@ var pages = {};
 pages = _.extend(pages, getTutorialPage());
 pages = _.extend(pages, getGuidePage());
 pages = _.extend(pages, getApiPage());
+pages = _.extend(pages, getApiWtfUtilPage());
 pages = _.extend(pages, getMiscPage());
 
 //pages = _.extend(pages, getErrorPage());

@@ -5,6 +5,53 @@ var getApiNav = function() {
       "name": "API",
       "navGroups": [
         {
+          "name": "wtf-util",
+          "href": "api/wtf-util",
+          "type": "group",
+          "navItems": [
+             {
+               "name": "function",
+               "type": "section",
+               "href": "api/wtf-util/function"
+             },
+             {
+               "name": "attributeValuePresent",
+               "href": "api/wtf-util/function/attributeValuePresent",
+               "type": "function"
+             },
+             {
+               "name": "clear",
+               "href": "api/wtf-util/function/clear",
+               "type": "function"
+             },
+             {
+               "name": "click",
+               "href": "api/wtf-util/function/click",
+               "type": "function"
+             },
+             {
+               "name": "findElement",
+               "href": "api/wtf-util/function/findElement",
+               "type": "function"
+             },
+             {
+               "name": "findElements",
+               "href": "api/wtf-util/function/findElements",
+               "type": "function"
+             },
+             {
+               "name": "getAttributeValue",
+               "href": "api/wtf-util/function/getAttributeValue",
+               "type": "function"
+             },
+             {
+               "name": "getSelectElement",
+               "href": "api/wtf-util/function/getSelectElement",
+               "type": "function"
+             }
+          ]
+        },
+        {
           "name": "ng",
           "href": "api/ng",
           "type": "group",

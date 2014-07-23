@@ -17,7 +17,7 @@
     // we can't add css/js the usual way, because some browsers (FF) eagerly prefetch resources
     // before the base attribute is added, causing 404 and terribly slow loading of the docs app.
     (function() {
-    debugger;
+
       var indexFile = (location.pathname.match(/\/(index[^\.]*\.html)/) || ['', ''])[1],
           wtf_home = (location.pathname.match(/\/(wtf-home)/) || ['', ''])[1],
           rUrl = /(#!\/|api|guide|misc|tutorial|error|index[^\.]*\.html).*$/,
@@ -26,7 +26,6 @@
           headEl = document.getElementsByTagName('head')[0],
           sync = true;
 
-      
       addTag('base', {href: baseUrl});
 
 

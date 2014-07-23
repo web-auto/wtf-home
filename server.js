@@ -10,10 +10,10 @@ require('http').createServer(function (request, response) {
           console.log(partials);
           if (!partials) {
             console.log('found');
-            file.serveFile('/index.html', 200, {}, request, response);
+            file.serveFile('index.html', 200, {}, request, response);
           } else {
             console.log('not found');
-            file.serveFile('/not-found.html', 200, {}, request, response);
+            file.serveFile('not-found.html', 200, {}, request, response);
           }
         }
     });

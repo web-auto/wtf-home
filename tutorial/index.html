@@ -17,13 +17,16 @@
     // we can't add css/js the usual way, because some browsers (FF) eagerly prefetch resources
     // before the base attribute is added, causing 404 and terribly slow loading of the docs app.
     (function() {
+    debugger;
       var indexFile = (location.pathname.match(/\/(index[^\.]*\.html)/) || ['', ''])[1],
+          wtf_home = (location.pathname.match(/\/(wtf-home)/) || ['', ''])[1],
           rUrl = /(#!\/|api|guide|misc|tutorial|error|index[^\.]*\.html).*$/,
           baseUrl = location.href.replace(rUrl, indexFile),
-          production = location.hostname === 'localhost:8080',
+          production = location.hostname === 'http://web-auto.github.io/wtf-home/',
           headEl = document.getElementsByTagName('head')[0],
           sync = true;
 
+      
       addTag('base', {href: baseUrl});
 
 
@@ -41,16 +44,16 @@
       addTag('script', {src: 'http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.16/angular-sanitize.min.js' }, sync);
       addTag('script', {src: 'http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.16/angular-touch.min.js' }, sync);
       addTag('script', {src: 'http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.16/angular-animate.min.js' }, sync);
-      addTag('script', {src: '/components/marked-0.3.1/lib/marked.js' }, sync);
-      addTag('script', {src: '/js/angular-bootstrap/bootstrap.js' }, sync);
-      addTag('script', {src: '/js/angular-bootstrap/bootstrap-prettify.js' }, sync);
-      addTag('script', {src: '/js/angular-bootstrap/dropdown-toggle.js' }, sync);
-      addTag('script', {src: '/components/lunr.js-0.4.2/lunr.min.js' }, sync);
-      addTag('script', {src: '/components/google-code-prettify-1.0.1/src/prettify.js' }, sync);
-      addTag('script', {src: '/components/google-code-prettify-1.0.1/src/lang-css.js' }, sync);
-      addTag('script', {src: '/js/versions-data.js' }, sync);
-      addTag('script', {src: '/js/pages-data.js' }, sync);
-      addTag('script', {src: '/js/docs.js' }, sync);
+      addTag('script', {src: 'components/marked-0.3.1/lib/marked.js' }, sync);
+      addTag('script', {src: 'js/angular-bootstrap/bootstrap.js' }, sync);
+      addTag('script', {src: 'js/angular-bootstrap/bootstrap-prettify.js' }, sync);
+      addTag('script', {src: 'js/angular-bootstrap/dropdown-toggle.js' }, sync);
+      addTag('script', {src: 'components/lunr.js-0.4.2/lunr.min.js' }, sync);
+      addTag('script', {src: 'components/google-code-prettify-1.0.1/src/prettify.js' }, sync);
+      addTag('script', {src: 'components/google-code-prettify-1.0.1/src/lang-css.js' }, sync);
+      addTag('script', {src: 'js/versions-data.js' }, sync);
+      addTag('script', {src: 'js/pages-data.js' }, sync);
+      addTag('script', {src: 'js/docs.js' }, sync);
       
 
       function addTag(name, attributes, sync) {
@@ -96,7 +99,7 @@
           <div class="row">
             <div class="col-md-9 header-branding">
               <a class="brand navbar-brand" href="http://angularjs.org">
-                <img class="logo" src="/img/angularjs-for-header-only.svg">
+                <img class="logo" src="img/angularjs-for-header-only.svg">
               </a>
               <ul class="nav navbar-nav">
                 <li class="divider-vertical"></li>

@@ -1,6 +1,6 @@
 var static = require('node-static');
 
-var file = new static.Server('./');
+var file = new static.Server(__dirname);
 
 require('http').createServer(function (request, response) {
   request.addListener('end', function () {
@@ -10,10 +10,10 @@ require('http').createServer(function (request, response) {
           console.log(partials);
           if (!partials) {
             console.log('found');
-            file.serveFile('index.html', 200, {}, request, response);
+            file.serveFile(__dirname + '/index.html', 200, {}, request, response);
           } else {
             console.log('not found');
-            file.serveFile('not-found.html', 200, {}, request, response);
+            file.serveFile(__dirname + '/not-found.html', 200, {}, request, response);
           }
         }
     });

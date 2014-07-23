@@ -1,0 +1,8 @@
+{
+  "name" : "wtf-home",
+  "description" : "WTF Home",
+
+  "dependencies" : {
+    "node-static": "0.7.4"
+  }
+}

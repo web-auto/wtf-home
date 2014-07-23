@@ -1,0 +1,17 @@
+{
+  "name": "wtf-home",
+  "version": "1.0.0",
+  "main": "/",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "bootstrap": "3.1.1",
+    "open-sans-fontface": "1.0.4",
+    "marked": "0.3.1",
+    "google-code-prettify": "1.0.1"
+  },
+  "devDependencies": {
+  }
+}

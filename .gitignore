@@ -1,0 +1,15 @@
+/target
+/bin
+/test-output
+.settings
+.classpath
+
+*.eclipse*
+
+.DS_Store
+
+node_modules/
+
+bower_componenets/
+
+
